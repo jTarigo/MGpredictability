@@ -1,0 +1,7 @@
+name = "MGpredictability"
+uuid = "26a9fcdb-2935-4698-a0ba-7686689a6caa"
+authors = ["Usuario <juanptarigo@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+DynamicalSystems = "61744808-ddfa-5f27-97ff-6e42cc95d634"
