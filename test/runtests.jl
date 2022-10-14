@@ -1,3 +1,3 @@
 using Test, MGpredictability
 
-# @testset ....
+@test f() == 1
