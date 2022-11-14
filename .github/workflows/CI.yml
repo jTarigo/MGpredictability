@@ -22,7 +22,7 @@ jobs:
           # test macOS and Windows with latest Julia only
           - os: macOS-latest
             arch: x64
-            version: 1
+            version: 1.7.3
           - os: windows-latest
             arch: x86
             version: 1.7.3
