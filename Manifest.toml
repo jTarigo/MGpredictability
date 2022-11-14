@@ -989,6 +989,12 @@ git-tree-sha1 = "cceb0257b662528ecdf0b4b4302eb00e767b38e7"
 uuid = "69de0a69-1ddd-5017-9359-2bf0b02dc9f0"
 version = "2.5.0"
 
+[[deps.Peaks]]
+deps = ["Compat"]
+git-tree-sha1 = "5f1390b0a0ef6d6411f9a9a37c4444d6a7e44780"
+uuid = "18e31ff7-3703-566c-8e60-38913d67486b"
+version = "0.4.1"
+
 [[deps.Pipe]]
 git-tree-sha1 = "6842804e7867b115ca9de748a0cf6b364523c16d"
 uuid = "b98c9c47-44ae-5843-9183-064241ee97a0"
