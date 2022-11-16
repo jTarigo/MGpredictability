@@ -1,4 +1,4 @@
-using Test, MGpredictability
+using Test
 
 fixed_point_attractor = defineAttractor(TimeSeries(DynSys(MG(4, 1, 4, 300), ones(300), discreteSolver())))
 
