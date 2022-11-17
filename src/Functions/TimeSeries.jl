@@ -1,6 +1,6 @@
 export TimeSeries
 
-function TimeSeries(DS::DiscreteDynamicalSystem, Δt = 200.0, Transient = 1000.0)
+function TimeSeries(DS::DiscreteDynamicalSystem; Δt = 200.0, Transient = 1000.0)
 
     x = trajectory(DS, Δt * DS.p.N, Ttr = Transient * DS.p.N, save_idxs = DS.p.N)[:, 1]
 

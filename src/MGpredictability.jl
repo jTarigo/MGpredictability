@@ -10,5 +10,7 @@ module MGpredictability
     include("Functions/DynSys.jl")
     include("Functions/TimeSeries.jl")
     include("Functions/defineAttractor.jl")
+    include("Functions/Isospike_diagram.jl")
+    include("Functions/lyapunovExponent.jl")
     
 end # module
