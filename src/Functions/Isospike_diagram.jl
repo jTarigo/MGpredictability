@@ -13,7 +13,7 @@ function isospike_diagram(α_lim::Tuple, Γ_lim::Tuple; n = 4::Int64, N = 396::I
 
         j = 1
 
-        Threads.@threads for Γ in Γ_vals
+        for Γ in Γ_vals
         
             pks[i, j] = defineAttractor(TimeSeries(DynSys(MG(α, Γ, n, N), x_in, discreteSolver()))).count
 
