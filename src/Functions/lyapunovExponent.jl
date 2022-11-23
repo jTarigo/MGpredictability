@@ -6,7 +6,7 @@ function MLE(α::Number, Γ_lim::Tuple; n = 4::Int64, N = 396::Int64, x_in = one
 
     Γ_vals = Γ_lim[1] : (Γ_lim[2] - Γ_lim[1]) / (M - 1) : Γ_lim[2]
 
-    Threads.@threads for Γ in Γ_vals
+    for Γ in Γ_vals
  
         S = DynSys(MG(α, Γ, n, N), x_in, discreteSolver())
 
@@ -26,7 +26,7 @@ function MLE(α_lim::Tuple, Γ::Number; n = 4::Int64, N = 396::Int64, x_in = one
 
     α_vals = α_lim[1] : (α_lim[2] - α_lim[1]) / (M - 1) : α_lim[2]
 
-    Threads.@threads for α in α_vals
+    for α in α_vals
  
         S = DynSys(MG(α, Γ, n, N), x_in, discreteSolver())
 
@@ -51,7 +51,7 @@ function MLE(α_lim::Tuple, Γ_lim::Tuple; n = 4::Int64, N = 396::Int64, x_in = 
     for α in α_vals
         j = 1
 
-        Threads.@threads for Γ in Γ_vals
+        for Γ in Γ_vals
 
             S = DynSys(MG(α, Γ, n, N), x_in, discreteSolver())
 
