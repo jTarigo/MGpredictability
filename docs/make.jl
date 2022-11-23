@@ -13,7 +13,22 @@ makedocs(
     doctest = false,
     strict = false,
     pages = [
-        "Home" => "index.md"
+        "Introduction" => "index.md"
+        "Contents" => [
+            "Types" => "contents/Types.md"
+            "Functions" => "contents/Functions.md"
+        ]
+        "Functions" => [
+            "DynSys" => "Functions/DynSys.md"
+            "TimeSeries" => "Functions/TimeSeries.md"
+            "defineAttractor" => "Functions/defineAttractor.md"
+            "isospike_diagram" => "Functions/isospike_diagram.md"
+            "MLE" => "Functions/MLE.md"
+        ]
+        "Future Implementations" => [
+            "Future Implementations" => "Future Implementations/FI.md"
+        ]
+            
     ],
 )
 
