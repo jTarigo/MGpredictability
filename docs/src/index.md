@@ -44,4 +44,3 @@ J = \begin{bmatrix}
     \alpha (1 - \beta) \frac{1 - (n - 1) x^n_1}{(1 + x^n_1)^2} & \dots & \dots & \dots & \beta 
     \end{bmatrix}
 ```
-
