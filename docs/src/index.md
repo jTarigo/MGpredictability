@@ -11,3 +11,12 @@ using Pkg; Pkg.add("https://github.com/jTarigo/MGpredictability")
 ```
 
 The library is composed of 
+
+
+## The Mackey-Glass System
+
+The Mackey-Glass (MG) system was proposed in 1977 to model the process of crations of blood cells in the bone marrow and its realse to the blood stream [Mackey, M. & Glass L. (1977)](10.1126/science.267326). It can be modeled as the following [DDE](https://en.wikipedia.org/wiki/Delay_differential_equation):
+
+$$
+\frac{dx}{dt} = \alpha \frac{x_{\Gamma}}{1 + x^{n}_{\Gamma}} - x
+$$
