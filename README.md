@@ -11,4 +11,4 @@
 [ci-img]: https://github.com/jTarigo/MGpredictability/actions/workflows/ci.yml/badge.svg?branch=main
 [ci-url]: https://github.com/jTarigo/MGpredictability/actions/workflows/ci.yml
 [lic-img]: https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000
-[lic-url]: https://github.com/jTarigo/MGpredictability/blob/main/LICENSE.md
+[lic-url]: https://github.com/jTarigo/MGpredictability/blob/main/LICENSE
