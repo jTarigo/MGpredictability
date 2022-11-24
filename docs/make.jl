@@ -25,9 +25,7 @@ makedocs(
             "isospike_diagram" => "Functions/isospike_diagram.md"
             "MLE" => "Functions/MLE.md"
         ]
-        "Future Implementations" => [
-            "Future Implementations" => "Future Implementations/FI.md"
-        ]
+        "Future Implementations" => "Future Implementations.md"
             
     ],
 )
