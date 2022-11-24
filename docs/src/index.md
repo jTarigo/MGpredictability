@@ -39,10 +39,9 @@ where $N$ is the number of points in a time interval $\Gamma$ and $\beta = \exp(
 J = \begin{bmatrix} 
     0 & 1 & 0 & \dots & 0\\
     0 & 0 & 1 & \dots & 0\\
-    \vdots & \ddots & \vdots\\
+    \vdots & & \ddots & & \vdots\\
     0 & 0 & 0 & \dots & 1\\
     \alpha (1 - \beta) \frac{1 - (n - 1) x^n_1}{(1 + x^n_1)^2} & \dots & \dots & \dots & \beta 
     \end{bmatrix}
-\]
 ```
 
