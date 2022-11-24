@@ -17,9 +17,9 @@ The library is composed of
 
 The Mackey-Glass (MG) system was proposed in 1977 to model the process of crations of blood cells in the bone marrow and its realse to the blood stream [Mackey, M. & Glass L. (1977)](10.1126/science.267326). It can be modeled as the following [DDE](https://en.wikipedia.org/wiki/Delay_differential_equation):
 
-\begin{equation}
+$$
 \frac{dx}{dt} = \alpha \frac{x_{\Gamma}}{1 + x^{n}_{\Gamma}} - x
-\end{equation}
+$$
 
 where $\alpha$, $\Gamma$ and $n$ are parameters and $x_{\Gamma} = x(t - \Gamma)$.
 
@@ -27,5 +27,8 @@ DDEs can be solved by many methods used for solving ODEs like the Runge-Kutta me
 
 This implementation leaves the equation as a map of $N$ variables as:
 $$
-x_{j}(t + 1) = 
+x_{j}(t + 1) = \begin{cases}
+  x_{j + 1} if j < N
+  \beta x_j + (1 - \beta) \alpha \frac{x_{j - N +1}}{1 + x^{n}_{j - N +1}} if j = N
+  \end{cases}
 $$
