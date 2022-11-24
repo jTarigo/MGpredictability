@@ -2,36 +2,10 @@
 
 The function DynSys defines the Mackey-Glass dynamical system as a `Dynamical System` from [DynamicalSystems.jl](https://juliadynamics.github.io/DynamicalSystems.jl/latest/).
 
-The function uses two other functions `eom!` and `jacobian!` which define the Mackey-Glass equation of motion and its jacobian respectively.
-
-## eom!
-
-When using the [`discreteSolver()`](@ref) method the function `eom!` is an in-place inplementation of the discrete Mackey-Glass equation of motion and is defined as:
-
+The function returns a single variable of the type DinamicalSystem and is called as:
 ```julia
-function eom!(x_new, x, p, t)
-
-    β = exp(-p.Γ/p.N)
-
-    x_new[1:end-1] = x[2:end]
-    x_new[end] = β * x[end] + (1 - β) * p.α * x[1]/(1 + x[1]^p.n)
-
-end
+DynSys(S::MG, init_cond::AbstractVector, algorithm::discreteSolver)
 ```
+with the added condition that the init_cond `Vector` must be of length `S.N`.
 
-## jacobian!
-
-When using the [`discreteSolver()`](@ref) method the function `jacobian!` is an in-place inplementation of the discrete Mackey-Glass jacobian of motion and is defined as:
-
-```julia
-function jacobian!(J, x, p, t)
-
-    β = exp(-p.Γ/p.N)
-
-    J[end, 1] = (1 - β) * p.α * (1 - (p.n - 1) * x[1]^p.n)/(1 + x[1]^p.n)^2
-
-end
-```
-
-## DynSys
-
+The function uses two other functions `eom!` and `jacobian!` which update the state of the system and the MG jacobian respectively, it also initializes the MG jacobian as a sparse matrix from [SparseArrays](https://docs.julialang.org/en/v1/stdlib/SparseArrays/).
