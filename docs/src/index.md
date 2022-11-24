@@ -29,7 +29,7 @@ This implementation leaves the equation as a map of $N$ variables as:
 ```math
 x_{j}(t + 1) = 
 \begin{cases} 
-x_{j + 1} \quad \quad \quad \quad \quad \quad \quad \quad if \quad j < N \\
+x_{j + 1} \quad \quad \quad \quad \quad \quad \quad \quad \quad if \quad j < N \\
 \beta x_j + (1 - \beta) \alpha \frac{x_{j - N +1}}{1 + x^{n}_{j - N +1}} \quad \quad if \quad j = N
 \end{cases}
 ```
