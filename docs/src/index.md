@@ -20,3 +20,5 @@ The Mackey-Glass (MG) system was proposed in 1977 to model the process of cratio
 $$
 \frac{dx}{dt} = \alpha \frac{x_{\Gamma}}{1 + x^{n}_{\Gamma}} - x
 $$
+
+where $\alpha$, $\Gamma$ and $n$ are parameters and $x_{\Gamma} = x(t - \Gamma)$
