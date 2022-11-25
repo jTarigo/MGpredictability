@@ -2,27 +2,27 @@
 
 Here is a list of the functions which can be used in the library.
 
-##DynSys
+## DynSys
 ```julia
 DynSys(S::MG, init_cond::AbstractVector, algorithm::discreteSolver)
 ```
 
-##TimeSeries
+## TimeSeries
 ```julia
 TimeSeries(DS::DiscreteDynamicalSystem; Δt = 200.0, Transient = 1000.0)
 ```
 
-##defineAttractor
+## defineAttractor
 ```julia
 defineAttractor(X::Trajectory)
 ```
 
-##isospike_diagram
+## isospike_diagram
 ```julia
 isospike_diagram(α_lim::Tuple, Γ_lim::Tuple; n = 4::Int64, N = 396::Int64, x_in = ones(N)::Vector{Float64}, M = 10::Int64)
 ```
 
-##MLE
+## MLE
 ```julia
 MLE(α::Number, Γ_lim::Tuple; n = 4::Int64, N = 396::Int64, x_in = ones(N)::Vector{Float64}, M = 10::Int64)
 
