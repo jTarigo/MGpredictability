@@ -53,7 +53,7 @@ function MLE(α_lim::Tuple, Γ_lim::Tuple; n = 4::Int64, N = 396::Int64, x_in = 
 
         for Γ in Γ_vals
 
-            λ[i, j] = lyapunov(DynSys(MG(α, Γ, n, N), x_in, discreteSolver()), N * 1000)
+            λ[i, j] = lyapunov(DynSys(MG(α, Γ, n, N), x_in, discreteSolver()), N * 1000, Ttr = N * 1000)
 
             j += 1
         end
